@@ -7,7 +7,7 @@ use integrationos_domain::{
     AccessKey, Id, Store,
 };
 use mongodb::{Client as MongoClient, Database};
-use oauth_api::Configuration;
+use oauth_refresh::Configuration;
 use once_cell::sync::Lazy;
 use rand::Rng;
 use reqwest::{header::HeaderMap, Client};
@@ -69,7 +69,7 @@ impl TestApp {
     pub async fn spawn(config: HashMap<&str, &str>) -> Self {
         use std::collections::hash_map::RandomState;
 
-        use oauth_api::Application;
+        use oauth_refresh::Application;
 
         let url = "mongodb://127.0.0.1:27017/?directConnection=true";
         let uuid = Uuid::new_v4().to_string();

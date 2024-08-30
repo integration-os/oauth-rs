@@ -1,13 +1,13 @@
 use dotenvy::dotenv;
 use envconfig::Envconfig;
 use integrationos_domain::telemetry::{get_subscriber, init_subscriber};
-use oauth_api::{Application, Configuration};
+use oauth_refresh::{Application, Configuration};
 
 #[actix_web::main]
 async fn main() -> anyhow::Result<()> {
     dotenv().ok();
 
-    let suscriber = get_subscriber("oauth_api".into(), "info".into(), std::io::stdout);
+    let suscriber = get_subscriber("oauth_refresh".into(), "info".into(), std::io::stdout);
     init_subscriber(suscriber);
 
     let configuration = Configuration::init_from_env()?;
