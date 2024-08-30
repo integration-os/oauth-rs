@@ -1,5 +1,5 @@
 [package]
-name = "oauth-api"
+name = "oauth-refresh"
 version = "0.1.0"
 edition = "2021"
 
@@ -40,7 +40,7 @@ tracing-subscriber = { version = "0.3.18", features = ["registry", "env-filter"]
 path = "src/lib.rs"
 
 [[bin]]
-name = "oauth-api"
+name = "oauth-refresh"
 path = "src/main.rs"
 
 [dev-dependencies]

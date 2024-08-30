@@ -1,7 +1,7 @@
 use crate::suite::TestApp;
 use integrationos_domain::{prefix::IdPrefix, Id};
 use mark_flaky_tests::flaky;
-use oauth_api::{Token, TokenExt};
+use oauth_refresh::{Token, TokenExt};
 use reqwest::header::{HeaderMap, HeaderName, HeaderValue};
 use std::collections::HashMap;
 use uuid::Uuid;

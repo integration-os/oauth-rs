@@ -2061,7 +2061,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "oauth-api"
+name = "oauth-refresh"
 version = "0.1.0"
 dependencies = [
  "actix",
